@@ -13,7 +13,10 @@ export default function Todo(props) {
         </label>
       </div>
       <div className="btn-group">
-        <button type="button" className="btn">
+        <button type="button" className="btn" onClick={() => props.setEditAction({
+          id: props.id,
+          name: props.name
+        })}>
           Edit <span className="visually-hidden">{props.name}</span>
         </button>
         <button
